@@ -4,7 +4,7 @@ starter kit for creating react lib with webpack/babel/es6/es7, unit test/ci/code
 ## features
 - only webpack, no gulp/grunt etc
 - write es6/es7 code.
-- dist minified/unmimified/source map
+- dist minified/unmimified umd and source map
 - test with karma-webpack
 - code coverage
 - live reload to code change(by webpack)
