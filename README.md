@@ -39,5 +39,5 @@ MIT
 
 [build-badge]: https://img.shields.io/travis/zxdong262/react-lib-starter-kit/master.svg?style=flat-square
 [build]: https://travis-ci.org/zxdong262/react-lib-starter-kit
-[codecov-badge]: https://img.shields.io/codecov/c/github/zxdong262/react-lib-starter-kit/dev.svg?style=flat-square
+[codecov-badge]: https://img.shields.io/codecov/c/github/zxdong262/react-lib-starter-kit/master.svg?style=flat-square
 [codecov]: https://codecov.io/gh/zxdong262/react-lib-starter-kit
