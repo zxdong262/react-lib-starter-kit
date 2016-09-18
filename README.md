@@ -34,6 +34,9 @@ npm run test
 
 ```
 
+## real example
+- [react-pagenav](https://github.com/zxdong262/react-pagenav)
+
 ## License
 MIT
 
