@@ -4,7 +4,6 @@
   "description": "starter kit for creating react lib with webpack/babel/es6/es7, unit test/ci/codecoverage/umd/source map included",
   "main": "dist/react-lib-starter-kit.js",
   "scripts": {
-    "start": "npm run dev:server && npm run dev:client && npm run build",
     "build": "rm dist/*.* && NODE_ENV=production ./node_modules/.bin/webpack -p --progress",
     "start": "./node_modules/.bin/npm-run-all -p dev:server dev:client ",
     "dev:server": "node build/dev-server",
