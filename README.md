@@ -1,5 +1,5 @@
 # react-lib-starter-kit [![Travis][build-badge]][build] [![Codecov][codecov-badge]][codecov]
-starter kit for creating react lib with webpack/babel/es6/es7, unit test/ci/codecoverage/umd/source map included.
+starter kit for creating react lib with webpack2/babel/es6/es7, unit test/ci/codecoverage/umd/source map included.
 
 ## features
 - only webpack, no gulp/grunt etc

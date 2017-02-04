@@ -69,19 +69,18 @@ module.exports = function(config) {
         'add': 'Add'
       },
       module: {
-        loaders: [
+        rules: [
           {
             test: /\.jsx?$/,
             exclude: /node_modules/,
-            loader: 'babel-loader'
-          }
-        ]
-        ,postLoaders: [
+            use: ['babel-loader']
+          },
           { //delays coverage til after tests are run, fixing transpiled source coverage error
             test: /\add\.js$/,
+            enforce: 'post',
             exclude: /(test|node_modules)\//,
             include: ['dist'],
-            loader: 'istanbul-instrumenter'
+            use: ['istanbul-instrumenter']
           } 
         ]
       }

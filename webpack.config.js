@@ -22,10 +22,10 @@ let config = {
     'react-dom': 'ReactDOM'
   },
   module: {
-    loaders: [{
+    rules: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loader: 'babel-loader'
+      use: ['babel-loader']
     }]
   },
   devtool: '#eval-source-map',
@@ -41,8 +41,8 @@ let config = {
     historyApiFallback: true,
     hot: true,
     inline: true,
-    progress: true,
-    watch: true,
+    //progress: true,
+    //watch: true,
     port: configSys.port,
     proxy: {
       '*': {
@@ -71,8 +71,6 @@ if (process.env.NODE_ENV === 'production') {
         'NODE_ENV': "'production'"
       }
     }),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       mangle: true,
       compress: {
@@ -80,7 +78,8 @@ if (process.env.NODE_ENV === 'production') {
       }
     }),
     new UnminifiedWebpackPlugin(),
-    new webpack.BannerPlugin(
+    new webpack.BannerPlugin({
+      banner:
       `
 /**
  * ${pack.name}
@@ -89,8 +88,8 @@ if (process.env.NODE_ENV === 'production') {
  * @author ${pack.author.name} (${pack.author.email})
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
-      `
-      , { raw: true })
+      `,
+      raw: true })
   ]
 
   config.entry = {

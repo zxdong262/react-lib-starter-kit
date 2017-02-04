@@ -10,7 +10,7 @@ const
   port = config.devServerPort,
   oneYear = 1000 * 60 * 60 * 24 * 365,
 
-  app = koa(),
+  app = new koa(),
   mount = require('koa-mount'),
   path = require('path'),
   Pug = require('koa-pug'),
