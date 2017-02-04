@@ -21,6 +21,8 @@ rm -rf .git
 # reset vc
 git init
 git remote add origin your-git-url
+npm i
+npm i react react-dom
 
 # start dev
 npm start
